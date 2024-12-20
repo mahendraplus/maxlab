@@ -445,8 +445,8 @@
 
     <script>
         const repoOwner = "mahendraplus";
-        const repoName = "mahendraplus.github.io";
-        const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/m`;
+        const repoName = "maxsites";
+        const apiUrl = `https://mahendraplus.github.io/maxsites/main/json/maxsites.json`;
 
         // Create buttons for each overlay
         const createOverlayButtons = (siteUrl, siteName) => {
@@ -519,7 +519,7 @@
                 const container = document.querySelector('.container');
                 data.forEach(item => {
                     if (item.type === "dir") {
-                        const siteUrl = `https://${repoOwner}.github.io/m/${item.name}/`;
+                        const siteUrl = `https://${repoOwner}.github.io/maxsites/${item.name}/`;
 
                         const siteCard = document.createElement('div');
                         siteCard.classList.add('site-card');
