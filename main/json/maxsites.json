@@ -1,0 +1,22 @@
+[
+  {
+    "name": "hostel-bill",
+    "description": "Hostel billing module",
+    "url": "https://mahendraplus.github.io/maxsites/hostel-bill"
+  },
+  {
+    "name": "late-fees",
+    "description": "Late fees module",
+    "url": "https://mahendraplus.github.io/maxsites/late-fees"
+  },
+  {
+    "name": "operating-system",
+    "description": "Operating system-related module",
+    "url": "https://mahendraplus.github.io/maxsites/operating-system"
+  },
+  {
+    "name": "wallpapers",
+    "description": "Wallpaper assets",
+    "url": "https://mahendraplus.github.io/maxsites/wallpapers"
+  }
+]
