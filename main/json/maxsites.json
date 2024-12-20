@@ -1,22 +1,66 @@
 [
   {
     "name": "hostel-bill",
-    "description": "Hostel billing module",
-    "url": "https://mahendraplus.github.io/maxsites/hostel-bill"
+    "path": "hostel-bill",
+    "sha": "26ff9caf97040e8cd28ca17f8e60962241ef67fd",
+    "size": 0,
+    "url": "https://api.github.com/repos/mahendraplus/maxsites/contents/hostel-bill?ref=Max",
+    "html_url": "https://github.com/mahendraplus/maxsites/tree/Max/hostel-bill",
+    "git_url": "https://api.github.com/repos/mahendraplus/maxsites/git/trees/26ff9caf97040e8cd28ca17f8e60962241ef67fd",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/mahendraplus/maxsites/contents/hostel-bill?ref=Max",
+      "git": "https://api.github.com/repos/mahendraplus/maxsites/git/trees/26ff9caf97040e8cd28ca17f8e60962241ef67fd",
+      "html": "https://github.com/mahendraplus/maxsites/tree/Max/hostel-bill"
+    }
   },
   {
     "name": "late-fees",
-    "description": "Late fees module",
-    "url": "https://mahendraplus.github.io/maxsites/late-fees"
+    "path": "late-fees",
+    "sha": "60353b7cfa33aea5db44d66cc1d823c3331c9b25",
+    "size": 0,
+    "url": "https://api.github.com/repos/mahendraplus/maxsites/contents/late-fees?ref=Max",
+    "html_url": "https://github.com/mahendraplus/maxsites/tree/Max/late-fees",
+    "git_url": "https://api.github.com/repos/mahendraplus/maxsites/git/trees/60353b7cfa33aea5db44d66cc1d823c3331c9b25",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/mahendraplus/maxsites/contents/late-fees?ref=Max",
+      "git": "https://api.github.com/repos/mahendraplus/maxsites/git/trees/60353b7cfa33aea5db44d66cc1d823c3331c9b25",
+      "html": "https://github.com/mahendraplus/maxsites/tree/Max/late-fees"
+    }
   },
   {
     "name": "operating-system",
-    "description": "Operating system-related module",
-    "url": "https://mahendraplus.github.io/maxsites/operating-system"
+    "path": "operating-system",
+    "sha": "4e63dc6bebda5c2a2dee03db6daf8c61e615389c",
+    "size": 0,
+    "url": "https://api.github.com/repos/mahendraplus/maxsites/contents/operating-system?ref=Max",
+    "html_url": "https://github.com/mahendraplus/maxsites/tree/Max/operating-system",
+    "git_url": "https://api.github.com/repos/mahendraplus/maxsites/git/trees/4e63dc6bebda5c2a2dee03db6daf8c61e615389c",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/mahendraplus/maxsites/contents/operating-system?ref=Max",
+      "git": "https://api.github.com/repos/mahendraplus/maxsites/git/trees/4e63dc6bebda5c2a2dee03db6daf8c61e615389c",
+      "html": "https://github.com/mahendraplus/maxsites/tree/Max/operating-system"
+    }
   },
   {
     "name": "wallpapers",
-    "description": "Wallpaper assets",
-    "url": "https://mahendraplus.github.io/maxsites/wallpapers"
+    "path": "wallpapers",
+    "sha": "d9d9ca3be7f86b9810193adeb87b0e79664b2121",
+    "size": 0,
+    "url": "https://api.github.com/repos/mahendraplus/maxsites/contents/wallpapers?ref=Max",
+    "html_url": "https://github.com/mahendraplus/maxsites/tree/Max/wallpapers",
+    "git_url": "https://api.github.com/repos/mahendraplus/maxsites/git/trees/d9d9ca3be7f86b9810193adeb87b0e79664b2121",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/mahendraplus/maxsites/contents/wallpapers?ref=Max",
+      "git": "https://api.github.com/repos/mahendraplus/maxsites/git/trees/d9d9ca3be7f86b9810193adeb87b0e79664b2121",
+      "html": "https://github.com/mahendraplus/maxsites/tree/Max/wallpapers"
+    }
   }
 ]
