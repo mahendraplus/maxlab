@@ -1,90 +1,12 @@
-[
-  {
-    "id": 1,
-    "name": "QuickNotes",
-    "description": "A simple app to take quick notes and save them securely.",
-    "type": "apk",
-    "version": "1.2",
-    "developer": "Amit Sharma",
-    "size": "5MB",
-    "website": "https://www.quicknotesapp.com",
-    "file_url": "https://www.quicknotesapp.com/download"
-  },
-  {
-    "id": 2,
-    "name": "PDF Reader",
-    "description": "A lightweight PDF reader with smooth navigation.",
-    "type": "apk",
-    "version": "3.0",
-    "developer": "Ravi Kumar",
-    "size": "10MB",
-    "website": "https://www.pdfreader.com",
-    "file_url": "https://www.pdfreader.com/download"
-  },
-  {
-    "id": 3,
-    "name": "E-Shop",
-    "description": "An e-commerce platform for buying and selling products online.",
-    "type": "web",
-    "version": "2.5",
-    "developer": "Suresh Reddy",
-    "size": "100MB",
-    "website": "https://www.eshop.com",
-    "file_url": null
-  },
-  {
-    "id": 4,
-    "name": "Foodie",
-    "description": "An app for food delivery and restaurant discovery.",
-    "type": "apk",
-    "version": "1.0",
-    "developer": "Priya Patel",
-    "size": "20MB",
-    "website": "https://www.foodieapp.com",
-    "file_url": "https://www.foodieapp.com/download"
-  },
-  {
-    "id": 5,
-    "name": "YogaGuide",
-    "description": "An app offering yoga tutorials and meditation sessions.",
-    "type": "apk",
-    "version": "2.1",
-    "developer": "Vikram Singh",
-    "size": "15MB",
-    "website": "https://www.yogaguide.com",
-    "file_url": "https://www.yogaguide.com/download"
-  },
-  {
-    "id": 6,
-    "name": "TechTalks",
-    "description": "A platform for tech enthusiasts to share and discover content.",
-    "type": "web",
-    "version": "1.4",
-    "developer": "Anjali Verma",
-    "size": "50MB",
-    "website": "https://www.techtalks.com",
-    "file_url": null
-  },
-  {
-    "id": 7,
-    "name": "Resume Builder",
-    "description": "Create professional resumes with ease.",
-    "type": "pdf",
-    "version": "1.3",
-    "developer": "Manish Joshi",
-    "size": "2MB",
-    "website": "https://www.resumebuilder.com",
-    "file_url": "https://www.resumebuilder.com/download"
-  },
-  {
-    "id": 8,
-    "name": "Photo Editor",
-    "description": "Edit and enhance your photos with advanced tools.",
-    "type": "apk",
-    "version": "4.0",
-    "developer": "Neha Kapoor",
-    "size": "30MB",
-    "website": "https://www.photoeditor.com",
-    "file_url": "https://www.photoeditor.com/download"
-  }
+[{
+  "id": 1,
+  "name": "Hostel Bill",
+  "description": "A web-based application to manage and calculate hostel bills.",
+  "type": "web",
+  "version": "1.0",
+  "developer": "Mahendra Plus",
+  "size": "null",
+  "website": "https://mahendraplus.github.io/maxlab/hostel-bill",
+  "file_url": ""
+}
 ]
