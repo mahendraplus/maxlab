@@ -1,13 +1,19 @@
 class AppList {
-    constructor(containerId, dataUrl) {
+    constructor(containerId, dataUrl, accessCode) {
         this.container = document.getElementById(containerId);
         this.dataUrl = dataUrl;
+        this.accessCode = accessCode;  // Store the access code
     }
 
-    // Fetch data from the given URL
+    // Fetch data from the given URL with the access code
     async fetchData() {
         try {
-            const response = await fetch(this.dataUrl);
+            const response = await fetch(this.dataUrl, {
+                headers: {
+                    "rentry-auth": this.accessCode // Pass the access code in the headers
+                }
+            });
+
             if (!response.ok) throw new Error('Failed to fetch data');
             return await response.json();
         } catch (error) {
@@ -27,7 +33,7 @@ class AppList {
         title.textContent = app.name;
         card.appendChild(title);
 
-        // type---
+        // Type
         const type = document.createElement('i');
         type.textContent = app.type;
         card.appendChild(type);
@@ -59,11 +65,8 @@ class AppList {
             const downloadButton = document.createElement('button');
             downloadButton.className = 'toggle-button';
             downloadButton.textContent = `Download ${app.size} v${app.version}`;
-            downloadButton.onclick = () => window.open(app.website, '_blank');
+            downloadButton.onclick = () => window.open(app.file_url, '_blank');
             iframeOverlay.appendChild(downloadButton);
-        } else {
-            // Optionally, you can display a message or note if the file_url is not available
-
         }
 
         // Share Button
@@ -121,6 +124,7 @@ class AppList {
 
 // Initialize and render the app list
 document.addEventListener('DOMContentLoaded', () => {
-    const appList = new AppList('app-container', 'https://mahendraplus.github.io/maxlab/main/json/main.json');
+    const accessCode = 'f50bc9521222f525df0593f8';  // Your access code
+    const appList = new AppList('app-container', 'https://rentry.co/maxlab/raw', accessCode);
     appList.render();
 });
