@@ -645,4 +645,61 @@
                         <p class="wallpaper-author">by MaxWall</p>
                         <a 
                             href="${wallpaper.imageURL}" 
-                            download="${wallpaper.wallpaperName.replace(/[^a-zA-Z0-9]/g
+                            download="${wallpaper.wallpaperName.replace(/[^a-zA-Z0-9]/g, '_')}.${wallpaper.extension}"
+                            class="download-btn"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <i class="fas fa-download"></i> Download
+                        </a>
+                        <div class="stats">
+                            <span class="applied-info">
+                                <i class="fas fa-check-circle"></i>
+                                ${formatNumber(wallpaper.totalWallpaperAppliedByUsers)} Applied
+                            </span>
+                            <span class="date-info">
+                                <i class="far fa-calendar-alt"></i>
+                                ${formatDate(wallpaper.createdAt)}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function retryFetch() {
+            fetchWallpapers();
+        }
+
+        // Debounce search input
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        const handleSearch = debounce((searchTerm) => {
+            const filtered = wallpapers.filter(wallpaper => 
+                wallpaper.wallpaperName.toLowerCase().includes(searchTerm.toLowerCase())
+            );
+            displayWallpapers(filtered);
+        }, 300);
+
+        searchInput.addEventListener('input', (e) => {
+            handleSearch(e.target.value);
+        });
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            fetchWallpapers();
+        });
+    </script>
+</body>
+</html>
+                
