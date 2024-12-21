@@ -1,12 +1,53 @@
-[{
-  "id": 1,
-  "name": "Hostel Bill",
-  "description": "A web-based application to manage and calculate hostel bills.",
-  "type": "web",
-  "version": "1.0",
-  "developer": "Mahendra Plus",
-  "size": "null",
-  "website": "https://mahendraplus.github.io/maxlab/hostel-bill",
-  "file_url": ""
-}
+[
+  {
+    "id": 1,
+    "name": "Hostel Bill",
+    "description": "A web-based application to manage and calculate hostel bills.",
+    "type": "web",
+    "version": "1.2",
+    "developer": "Mahendra Mali",
+    "size": "null",
+    "website": "https://mahendraplus.github.io/maxlab/hostel-bill"
+  },
+  {
+    "id": 2,
+    "name": "Late Fees",
+    "description": "A web-based tool for calculating and managing late fees.",
+    "type": "web",
+    "version": "2.0",
+    "developer": "Mahendra Mali",
+    "size": "null",
+    "website": "https://mahendraplus.github.io/maxlab/late-fees"
+  },
+  {
+    "id": 3,
+    "name": "Operating System",
+    "description": "A web-based application to manage and track operating system configurations.",
+    "type": "web",
+    "version": "1.5",
+    "developer": "Mahendra Mali",
+    "size": "null",
+    "website": "https://mahendraplus.github.io/maxlab/operating-system"
+  },
+  {
+    "id": 4,
+    "name": "Wallpapers",
+    "description": "A collection of high-quality wallpapers available for download.",
+    "type": "web",
+    "version": "3.0",
+    "developer": "Mahendra Mali",
+    "size": "null",
+    "website": "https://mahendraplus.github.io/maxlab/wallpapers"
+  },
+  {
+    "id": 5,
+    "name": "B4Bomber",
+    "description": "An Android app for bombarding messages.",
+    "type": "Android App",
+    "version": "v1.2.4",
+    "developer": "Mahendra Mali",
+    "size": "6.91MB",
+    "website": "https://mahendraplus.github.io/B4Bomber",
+    "file_url": "https://github.com/mahendraplus/B4Bomber/releases/download/v1.2.4/B4BOMBER_V1.2.4.apk"
+  }
 ]
