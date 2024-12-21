@@ -121,6 +121,6 @@ class AppList {
 
 // Initialize and render the app list
 document.addEventListener('DOMContentLoaded', () => {
-    const appList = new AppList('app-container', 'https://rentry.co/maxlab/raw');
+    const appList = new AppList('app-container', './maxlab/main/json/main.json');
     appList.render();
 });
