@@ -5,27 +5,44 @@
         {
             "id": 1,
             "name": "MALI MAHENDRAKUMAR RAMESHBHAI",
-            "roomNo": "101",
+            "roomNo": "04",
             "entryDate": "10-09-2024",
             "deposit": 5000,
             "monthlyRent": 5500,
             "payments": [
-                {
-                    "period": "Sept 10 - Oct 10",
-                    "amount": 5500,
-                    "status": "paid"
-                },
-                {
-                    "period": "Oct 10 - Nov 10",
-                    "amount": 5500,
-                    "status": "pending"
-                },
-                {
-                    "period": "Nov 10 - Nov 25",
-                    "amount": 4583,
-                    "status": "pending"
-                }
-            ]
+    {
+        "period": "Sept 10 - Oct 10",
+        "amount": 5500,
+        "status": "paid"
+    },
+    {
+        "period": "Oct 10 - Nov 10",
+        "amount": 5500,
+        "status": "paid"
+    },
+    {
+        "period": "Nov 10 - Dec 10",
+        "amount": 4500,
+        "status": "paid"
+    },
+    {
+        "period": "Dec 10 - Jan 10",
+        "amount": 5500,
+        "status": "pending"
+    },
+    {
+        "period": "Jan 10 - Feb 10",
+        "amount": 5500,
+        "status": "pending"
+    },
+    {
+        "period": "Feb 10 - Mar 10",
+        "amount": 5500,
+        "status": "pending"
+    }
+]
+
+            
         },
         {
             "id": 2,
