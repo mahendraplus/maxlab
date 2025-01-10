@@ -1,15 +1,32 @@
+
 STUDENT (rollno, name, class, birthdate)
+
 COURSE (courseno, coursename, max_marks, pass_marks)
+
  SC (rollno, courseno, marks)
-Create the above three tables along with key constraints.
-Write an Insert script for insertion of rows with substitution variables and insert
+
+1.	Create the above three tables along with key constraints.
+
+2.	Write an Insert script for insertion of rows with substitution variables and insert
+
              Appropriate data.
-Add a constraint that the marks entered should strictly be between 0 and 100.
-Display details of student who takes ‘Database Management System’ course.
-Display the average marks obtained by each student.
-Select all courses where passing marks are more than 30% of average maximum mark.
-Display details of students who are born in 1980 or 1982.
-Create a view that displays student courseno and its corresponding marks.
+
+3.	Add a constraint that the marks entered should strictly be between 0 and 100.
+
+4.	Display details of student who takes ‘Database Management System’ course.
+
+5.	Display the average marks obtained by each student.
+
+6.	Select all courses where passing marks are more than 30% of average maximum mark.
+
+7.	Display details of students who are born in 1980 or 1982.
+
+8.	Create a view that displays student courseno and its corresponding marks.
 
 
 
+9.	 customers from “Lalbaug” city of Ahmedabad and Baroda.
+
+	10.	Find all the customers whose name starts with the letter ‘P’.
+
+	11.	Find the total, average, highest and lowest unit price of an item.
