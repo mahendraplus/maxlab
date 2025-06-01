@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahendra Mali - Medical Report</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-light: #3b82f6;
+            --secondary: #1e40af;
+            --danger: #dc2626;
+            --danger-light: #ef4444;
+            --warning: #d97706;
+            --success: #16a34a;
+            --info: #0284c7;
+            --text: #1e293b;
+            --text-light: #64748b;
+            --bg: #f8fafc;
+            --card: #ffffff;
+            --border: #e2e8f0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+            font-size: 15px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            background-color: var(--card);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            padding: 30px;
+            overflow: hidden;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                margin: 0;
+                border-radius: 0;
+                padding: 20px;
+            }
+        }
+        
+        h1, h2, h3, h4 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        h1 {
+            text-align: center;
+            color: var(--primary);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            position: relative;
+            font-size: 28px;
+        }
+        
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--primary-light));
+            border-radius: 2px;
+        }
+        
+        h2 {
+            font-size: 22px;
+            margin-top: 35px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--border);
+        }
+        
+        h3 {
+            font-size: 18px;
+            margin-top: 25px;
+            color: var(--secondary);
+        }
+        
+        .section {
+            margin-bottom: 25px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0 25px;
+            background-color: var(--card);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+        
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        th {
+            background-color: #f1f5f9;
+            color: var(--text);
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+        }
+        
+        tr:last-child td {
+            border-bottom: none;
+        }
+        
+        tr:hover td {
+            background-color: #f8fafc;
+        }
+        
+        .abnormal {
+            color: var(--danger);
+            font-weight: 500;
+        }
+        
+        .critical {
+            color: var(--danger);
+            font-weight: 600;
+            background-color: rgba(220, 38, 38, 0.08);
+        }
+        
+        .normal {
+            color: var(--success);
+            font-weight: 500;
+        }
+        
+        .warning {
+            color: var(--warning);
+            font-weight: 500;
+        }
+        
+        ul {
+            list-style-type: none;
+            margin: 15px 0;
+        }
+        
+        li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+        
+        .note {
+            background-color: #fef9c3;
+            border-left: 4px solid #f59e0b;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 6px;
+            color: #78350f;
+            font-size: 14px;
+        }
+        
+        .important-note {
+            background-color: #fee2e2;
+            border-left: 4px solid var(--danger);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 6px;
+            color: var(--text);
+        }
+        
+        .important-note h2 {
+            color: var(--danger);
+            border-bottom: none;
+            margin-top: 0;
+        }
+        
+        .important-note ul {
+            margin: 15px 0 0;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 13px;
+            color: var(--text-light);
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .badge-normal {
+            background-color: #dcfce7;
+            color: var(--success);
+        }
+        
+        .badge-abnormal {
+            background-color: #fee2e2;
+            color: var(--danger);
+        }
+        
+        .badge-critical {
+            background-color: var(--danger);
+            color: white;
+        }
+        
+        .badge-warning {
+            background-color: #fef3c7;
+            color: var(--warning);
+        }
+        
+        .patient-info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .info-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            border-left: 3px solid var(--primary);
+        }
+        
+        .info-card h4 {
+            color: var(--text-light);
+            font-size: 13px;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        
+        .info-card p {
+            font-weight: 500;
+            color: var(--text);
+        }
+        
+        @media (max-width: 600px) {
+            table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+            
+            .patient-info-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            h2 {
+                font-size: 20px;
+            }
+            
+            h3 {
+                font-size: 17px;
+            }
+        }
+        
+        .medication-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 12px;
+            margin: 20px 0;
+        }
+        
+        .med-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 12px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            border-top: 3px solid var(--primary-light);
+        }
+        
+        .med-card h4 {
+            color: var(--primary);
+            font-size: 14px;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        
+        .med-card p {
+            font-size: 13px;
+            color: var(--text-light);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Medical Report - Mahendra Mali</h1>
+
+        <div class="section">
+            <h2>Patient Information</h2>
+            <div class="patient-info-grid">
+                <div class="info-card">
+                    <h4>Patient Name</h4>
+                    <p>Mahendrabhai Rameshbbai Mali</p>
+                </div>
+                <div class="info-card">
+                    <h4>Age</h4>
+                    <p>23 Years</p>
+                </div>
+                <div class="info-card">
+                    <h4>Sex</h4>
+                    <p>Male</p>
+                </div>
+                <div class="info-card">
+                    <h4>Report Date</h4>
+                    <p>01/06/2025</p>
+                </div>
+                <div class="info-card">
+                    <h4>Referring Doctor</h4>
+                    <p>Dr. Ravindra B. Patel / Dr. R.B.patel M.D.Medicine</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Blood Test Report</h2>
+            <h3>Hemogram</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Test Name</th>
+                        <th>Result</th>
+                        <th>Units</th>
+                        <th>Reference Range</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Hemoglobin</td>
+                        <td class="abnormal">11.9</td>
+                        <td>g/dl</td>
+                        <td>13.0-18.0</td>
+                        <td><span class="badge badge-abnormal">Low</span></td>
+                    </tr>
+                    <tr>
+                        <td>Total RBC Count</td>
+                        <td class="abnormal">4.33</td>
+                        <td>million/cmm</td>
+                        <td>4.7-6.0</td>
+                        <td><span class="badge badge-abnormal">Low</span></td>
+                    </tr>
+                    <tr>
+                        <td>Total WBC Count</td>
+                        <td class="normal">6700</td>
+                        <td>/cmm</td>
+                        <td>4000-10000</td>
+                        <td><span class="badge badge-normal">Normal</span></td>
+                    </tr>
+                    <tr>
+                        <td>Platelet Count</td>
+                        <td class="critical">84000</td>
+                        <td>/cmm</td>
+                        <td>150000-450000</td>
+                        <td><span class="badge badge-critical">Critical</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Blood Indices</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Test Name</th>
+                        <th>Result</th>
+                        <th>Units</th>
+                        <th>Reference Range</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>PCV</td>
+                        <td class="abnormal">37.1</td>
+                        <td>%</td>
+                        <td>42-52</td>
+                        <td><span class="badge badge-abnormal">Low</span></td>
+                    </tr>
+                    <tr>
+                        <td>MCV</td>
+                        <td class="normal">85.68</td>
+                        <td>femtolitre</td>
+                        <td>80-100</td>
+                        <td><span class="badge badge-normal">Normal</span></td>
+                    </tr>
+                    <tr>
+                        <td>MCH</td>
+                        <td class="normal">27.48</td>
+                        <td>Pg</td>
+                        <td>27-32</td>
+                        <td><span class="badge badge-normal">Normal</span></td>
+                    </tr>
+                    <tr>
+                        <td>MCHC</td>
+                        <td class="abnormal">32.1</td>
+                        <td>g/dl</td>
+                        <td>32-36</td>
+                        <td><span class="badge badge-warning">Low</span></td>
+                    </tr>
+                    <tr>
+                        <td>RDW</td>
+                        <td class="normal">13.0</td>
+                        <td>%</td>
+                        <td>11.5-14.0</td>
+                        <td><span class="badge badge-normal">Normal</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Differential WBC Count</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Test Name</th>
+                        <th>Result</th>
+                        <th>Units</th>
+                        <th>Reference Range</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Polymorphs</td>
+                        <td class="normal">68</td>
+                        <td>%</td>
+                        <td>60 - 70</td>
+                        <td><span class="badge badge-normal">Normal</span></td>
+                    </tr>
+                    <tr>
+                        <td>Lymphocytes</td>
+                        <td class="normal">28</td>
+                        <td>%</td>
+                        <td>20 - 40</td>
+                        <td><span class="badge badge-normal">Normal</span></td>
+                    </tr>
+                    <tr>
+                        <td>Eosinophils</td>
+                        <td class="normal">02</td>
+                        <td>%</td>
+                        <td>1 - 4</td>
+                        <td><span class="badge badge-normal">Normal</span></td>
+                    </tr>
+                    <tr>
+                        <td>Monocytes</td>
+                        <td class="normal">02</td>
+                        <td>%</td>
+                        <td>2 - 6</td>
+                        <td><span class="badge badge-normal">Normal</span></td>
+                    </tr>
+                    <tr>
+                        <td>Basophils</td>
+                        <td class="normal">00</td>
+                        <td>%</td>
+                        <td>0 - 1</td>
+                        <td><span class="badge badge-normal">Normal</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Biochemical Tests</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Test Name</th>
+                        <th>Result</th>
+                        <th>Units</th>
+                        <th>Reference Range</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Random Blood Sugar</td>
+                        <td class="normal">112</td>
+                        <td>mg/dl</td>
+                        <td>70 to 140</td>
+                        <td><span class="badge badge-normal">Normal</span></td>
+                    </tr>
+                    <tr>
+                        <td>C.R.P. Test</td>
+                        <td class="abnormal">5.3</td>
+                        <td>mg/L</td>
+                        <td>0.0 - 5.0</td>
+                        <td><span class="badge badge-warning">Elevated</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>ECG Report</h2>
+            <div class="info-card" style="max-width: 600px;">
+                <h4>Diagnosis</h4>
+                <p>NORMAL ECG (Unconfirmed Diagnosis)</p>
+                <h4 style="margin-top: 10px;">Findings</h4>
+                <p>ST elev, probable normal early repol pattern</p>
+                <p>Baseline wander in lead(s) V1</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Clinical Presentation</h2>
+            <h3>Symptoms</h3>
+            <ul>
+                <li>Right side chest pain (दाहिनी तरफ छाती में दर्द)</li>
+                <li>Cough (खांसी)</li>
+                <li>Headache (सर दर्द)</li>
+            </ul>
+            
+            <h3>Vital Signs</h3>
+            <div class="patient-info-grid">
+                <div class="info-card">
+                    <h4>Temperature</h4>
+                    <p>98.4 °F</p>
+                </div>
+                <div class="info-card">
+                    <h4>Pulse</h4>
+                    <p>106/min <span class="badge badge-warning">Elevated</span></p>
+                </div>
+                <div class="info-card">
+                    <h4>Blood Pressure</h4>
+                    <p>108/70 mmHg <span class="badge badge-normal">Normal</span></p>
+                </div>
+                <div class="info-card">
+                    <h4>SpO2</h4>
+                    <p>Not recorded</p>
+                </div>
+            </div>
+            
+            <h3>Prescribed Medications</h3>
+            <div class="medication-grid">
+                <div class="med-card">
+                    <h4>N S Inj (Steridrip)</h4>
+                    <p>Intravenous</p>
+                </div>
+                <div class="med-card">
+                    <h4>MVI Ing</h4>
+                    <p>Multivitamin Injection</p>
+                </div>
+                <div class="med-card">
+                    <h4>Eldervit 12 Inj</h4>
+                    <p>Vitamin B12 Injection</p>
+                </div>
+                <div class="med-card">
+                    <h4>Pengin-40 Mg Inj</h4>
+                    <p>Pantoprazole Injection</p>
+                </div>
+                <div class="med-card">
+                    <h4>Onzil-Inj</h4>
+                    <p>Ondansetron Injection</p>
+                </div>
+                <div class="med-card">
+                    <h4>Ramcet Inj</h4>
+                    <p>Paracetamol Injection</p>
+                </div>
+                <div class="med-card">
+                    <h4>Fevertis Amp</h4>
+                    <p>Antipyretic</p>
+                </div>
+                <div class="med-card">
+                    <h4>Deriphyllin Inj</h4>
+                    <p>Bronchodilator</p>
+                </div>
+                <div class="med-card">
+                    <h4>Moxygen CV -1.2 Inj</h4>
+                    <p>Antibiotic</p>
+                </div>
+                <div class="med-card">
+                    <h4>Tab Pantogen</h4>
+                    <p>Pantoprazole Tablet</p>
+                </div>
+                <div class="med-card">
+                    <h4>Tab Alyfat</h4>
+                    <p>Atorvastatin Tablet</p>
+                </div>
+                <div class="med-card">
+                    <h4>Tab RD</h4>
+                    <p>Combination Tablet</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="important-note">
+            <h2>Critical Findings & Recommendations</h2>
+            <p>Based on the diagnostic reports, the following critical findings require immediate attention:</p>
+            <ul>
+                <li><strong>Thrombocytopenia:</strong> Critically low platelet count (84,000 /cmm) increases bleeding risk and requires urgent evaluation for possible causes including infections, nutritional deficiencies, or hematological disorders.</li>
+                <li><strong>Anemia:</strong> Low hemoglobin (11.9 g/dl) and RBC count (4.33 million/cmm) suggest mild anemia that may contribute to fatigue and weakness.</li>
+                <li><strong>Inflammation:</strong> Elevated CRP (5.3 mg/L) indicates possible infection or inflammatory process that may be related to the presenting symptoms.</li>
+            </ul>
+            <p style="margin-top: 15px;"><strong>Recommendations:</strong> Strict adherence to prescribed treatment regimen with close monitoring of platelet count. Immediate follow-up with hematologist if platelet count doesn't improve. Maintain hydration and avoid activities that may cause trauma or bleeding. Monitor for any signs of bleeding (petechiae, gum bleeding, etc.).</p>
+        </div>
+
+        <div class="note">
+            <strong>Disclaimer:</strong> This report is generated based on provided medical documents and is for informational purposes only. It does not constitute medical advice. Please consult your treating physician for proper diagnosis and treatment. Laboratory results should always be interpreted in clinical context.
+        </div>
+
+        <div class="footer">
+            Report Generated on: <script>document.write(new Date().toLocaleDateString('en-IN', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }));</script>
+            <br>This is a computer-generated report. No signature is required.
+        </div>
+    </div>
+</body>
+                                         </html>
